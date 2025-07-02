@@ -1,23 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Confirma SeH - Seguridad e Higiene</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    body { line-height: 1.6; color: #333; background: #f4f4f4; }
-    header { background: #26547C; color: white; padding: 2rem; text-align: center; }
-    nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; padding: 1rem 0; background: #1f3b57; }
-    nav a { color: white; text-decoration: none; font-weight: 600; }
-    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #26547C; margin-bottom: 1rem; }
-    .hero-imgs { display: flex; flex-direction: column; gap: 1rem; }
-    .hero-imgs img { width: 100%; height: auto; border-radius: 8px; }
-    form input, form textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px; }
-    form button { background: #26547C; color: white; padding: 0.75rem 2rem; border: none; border-radius: 5px; cursor: pointer; }
-    footer { text-align: center; padding: 2rem; background: #1f3b57; color: white; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      color: #333;
+      background: #f4f4f4;
+    }
+    header {
+      background: #26547C;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #1f3b57;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem 0;
+      margin: 0;
+    }
+    nav li {
+      margin: 0 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #26547C;
+      margin-bottom: 1rem;
+    }
+    .hero {
+      background: #e6f0f7;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .benefits p::before {
+      content: "✔ ";
+      color: #4E944F;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+    .service {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background: #26547C;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f3b57;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -25,54 +109,56 @@
     <h1>CONFIRMA SeH</h1>
     <p>Consultora en Seguridad e Higiene Laboral</p>
   </header>
-
   <nav>
     <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#clientes">Clientes</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#clientes">Clientes</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
-  <section id="inicio">
-    <h2>Bienvenido a Confirma SeH</h2>
-    <p>Brindamos soluciones técnicas y personalizadas en Seguridad e Higiene para pequeñas y medianas empresas.</p>
+  <section class="hero" id="inicio">
+    <h2>Soluciones técnicas y confiables en Seguridad e Higiene</h2>
+    <div class="benefits">
+      <p>Auditamos tus instalaciones</p>
+      <p>Informes técnicos al día</p>
+      <p>Capacitaciones prácticas</p>
+      <p>Planes de autoprotección adaptados a tu empresa</p>
+    </div>
   </section>
 
   <section id="servicios">
     <h2>Servicios</h2>
-    <ul>
-      <li>Estudios técnicos: ruido, iluminación, puesta a tierra</li>
-      <li>Planes de Autoprotección y proyectos contra incendio</li>
-      <li>Capacitaciones y simulacros de evacuación</li>
-      <li>Gestión en portales ART: RAR, NTE, RGRL</li>
-    </ul>
-  </section>
-
-  <section id="clientes">
-    <h2>Clientes</h2>
-    <p>Trabajamos junto a empresas comprometidas con la prevención. Próximamente compartiremos casos reales.</p>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Estudios Técnicos</h3>
+        <p>Ruido, iluminación, puesta a tierra y continuidad de masas.</p>
+      </div>
+      <div class="service">
+        <h3>Planes de Autoprotección</h3>
+        <p>Desarrollo y simulacros con normativa vigente.</p>
+      </div>
+      <div class="service">
+        <h3>Gestión ART</h3>
+        <p>Carga de RAR, NTE, RGRL en plataformas.</p>
+      </div>
+      <div class="service">
+        <h3>Capacitaciones</h3>
+        <p>Uso de extintores, seguridad en obra, evacuación.</p>
+      </div>
+    </div>
   </section>
 
   <section id="nosotros">
     <h2>Nosotros</h2>
-    <p>Somos una consultora con enfoque técnico y humano, liderada por Gonzalo Mazzeo, Técnico en Seguridad e Higiene con experiencia en obra, documentación y capacitaciones.</p>
-  </section>
-
-  <section class="hero-imgs">
-    <img src="images/img1.jpg" alt="Imagen 1">
-    <img src="images/img2.jpg" alt="Imagen 2">
-    <img src="images/img3.jpg" alt="Imagen 3">
-  </section>
-
-  <section id="mision">
-    <h2>Misión</h2>
+    <p>Somos una consultora enfocada en soluciones para PyMEs, liderada por Gonzalo Mazzeo, Técnico en Seguridad e Higiene con experiencia en campo, documentación legal y capacitación.</p>
+    <h3>Misión</h3>
     <p>Prevenir riesgos laborales mediante un servicio integral, técnico y accesible.</p>
-    <h2>Visión</h2>
+    <h3>Visión</h3>
     <p>Ser una consultora de referencia para PyMEs que buscan crecer con seguridad.</p>
-    <h2>Valores</h2>
+    <h3>Valores</h3>
     <ul>
       <li>Compromiso</li>
       <li>Responsabilidad</li>
@@ -81,13 +167,18 @@
     </ul>
   </section>
 
+  <section id="clientes">
+    <h2>Clientes</h2>
+    <p>Empresas que confían en nuestros servicios. Espacio reservado para logos o testimonios.</p>
+  </section>
+
   <section id="contacto">
     <h2>Contacto</h2>
-    <form>
-      <input type="text" name="nombre" placeholder="Nombre completo" required>
-      <input type="text" name="empresa" placeholder="Empresa">
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <input type="tel" name="telefono" placeholder="Teléfono">
+    <form class="contact-form">
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input type="text" name="empresa" placeholder="Empresa" />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <input type="tel" name="telefono" placeholder="Teléfono" />
       <textarea name="consulta" rows="5" placeholder="Consulta" required></textarea>
       <button type="submit">Enviar</button>
     </form>
