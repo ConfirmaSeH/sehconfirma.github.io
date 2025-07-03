@@ -1,4 +1,9 @@
 .logo {
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.logo {
   max-height: 40px;
   width: auto;
   display: block;
