@@ -1,21 +1,21 @@
-.logo {
-  height: 40px;
-  display: block;
-  margin: 0 auto;
-}
-.logo {
-  max-height: 40px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-.logo {
-  max-width: 50%;   /* ocupa como máximo la mitad del ancho del header */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+/* 1) Asegúrate de no tener el header en posición absoluta o fija
+   Si tienes algo como “position: absolute” o “position: fixed” quítalo
+   (o comenta las líneas) para que el header fluya con el contenido. */
 header {
+  /* position: relative; */    /* si antes era absolute/fixed, cámbialo a relative o quítalo */
   padding: 20px 0;
   text-align: center;
+}
+
+/* 2) Limita el tamaño de la imagen para que no crezca demasiado */
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-height: 50px;    /* altura máxima: ajústala a tu preferencia */
+  width: auto;         /* mantiene la proporción */
+}
+
+/* 3) Si quisieras mantener el header fijo (sticky), añade un top-margin al main */
+main {
+  /* margin-top: 70px; */  /* descomenta y ajusta igual a la altura del header */
 }
