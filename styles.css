@@ -1,6 +1,6 @@
 .logo {
   max-width: 50%;   /* ocupa como máximo la mitad del ancho del header */
-  height: auto;
+  max-height: 40px;
   display: block;
   margin: 0 auto;
 }
