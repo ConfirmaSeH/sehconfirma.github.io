@@ -1,0 +1,9 @@
+.logo {
+  height: 60px;        /* ajusta la altura a tu gusto */
+  display: block;
+  margin: 0 auto;      /* centra horizontalmente */
+}
+header {
+  padding: 20px 0;
+  text-align: center;
+}
