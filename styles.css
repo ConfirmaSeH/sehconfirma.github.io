@@ -1,7 +1,8 @@
 .logo {
-  height: 60px;        /* ajusta la altura a tu gusto */
+  max-width: 50%;   /* ocupa como máximo la mitad del ancho del header */
+  height: auto;
   display: block;
-  margin: 0 auto;      /* centra horizontalmente */
+  margin: 0 auto;
 }
 header {
   padding: 20px 0;
