@@ -1,6 +1,12 @@
 .logo {
-  max-width: 50%;   /* ocupa como máximo la mitad del ancho del header */
   max-height: 40px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+.logo {
+  max-width: 50%;   /* ocupa como máximo la mitad del ancho del header */
+  height: auto;
   display: block;
   margin: 0 auto;
 }
