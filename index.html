@@ -4,187 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Confirma SeH - Seguridad e Higiene</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
-    body {
-      line-height: 1.6;
-      color: #333;
-      background: #f4f4f4;
-    }
-    header {
-      background: #26547C;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    nav {
-      background: #1f3b57;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 1rem 0;
-      margin: 0;
-    }
-    nav li {
-      margin: 0 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: #26547C;
-      margin-bottom: 1rem;
-    }
-    .hero {
-      background: #e6f0f7;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .benefits {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .benefits p::before {
-      content: "✔ ";
-      color: #4E944F;
-    }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
-    .service {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact-form button {
-      background: #26547C;
-      color: white;
-      padding: 0.75rem 2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #1f3b57;
-      color: white;
-    }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>CONFIRMA SeH</h1>
-    <p>Consultora en Seguridad e Higiene Laboral</p>
-  </header>
-  <nav>
-    <ul>
+  <!-- Navegación fija -->
+  <nav class="navbar">
+    <ul class="nav-list">
       <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#intro">Consultora</a></li>
       <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
-  <section class="hero" id="inicio">
-    <h2>Soluciones técnicas y confiables en Seguridad e Higiene</h2>
-    <div class="benefits">
-      <p>Auditamos tus instalaciones</p>
-      <p>Informes técnicos al día</p>
-      <p>Capacitaciones prácticas</p>
-      <p>Planes de autoprotección adaptados a tu empresa</p>
+  <!-- Hero full-screen -->
+  <section id="inicio" class="hero" style="background-image: url('images/Imagen1.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img class="hero-logo" src="images/Logo.png" alt="Logo CONFIRMA SeH" />
+      <h1 class="hero-title">CONFIRMA SeH</h1>
+      <p class="hero-subtitle">Consultora en Seguridad e Higiene Laboral</p>
     </div>
   </section>
 
-  <section id="servicios">
+  <!-- Sección Introductoria -->
+  <section id="intro" class="intro-section">
+    <h2>Consultora en Seguridad e Higiene Laboral</h2>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="servicios" class="container">
     <h2>Servicios</h2>
-    <div class="services-grid">
-      <div class="service">
+    <div class="service-cards">
+      <div class="service-card">
         <h3>Estudios Técnicos</h3>
         <p>Ruido, iluminación, puesta a tierra y continuidad de masas.</p>
       </div>
-      <div class="service">
+      <div class="service-card">
         <h3>Planes de Autoprotección</h3>
         <p>Desarrollo y simulacros con normativa vigente.</p>
       </div>
-      <div class="service">
+      <div class="service-card">
         <h3>Gestión ART</h3>
         <p>Carga de RAR, NTE, RGRL en plataformas.</p>
       </div>
-      <div class="service">
+      <div class="service-card">
         <h3>Capacitaciones</h3>
         <p>Uso de extintores, seguridad en obra, evacuación.</p>
       </div>
     </div>
   </section>
 
-  <section id="nosotros">
-    <h2>Nosotros</h2>
-    <p>Con más de 10 años de experiencia en el rubro, en Confirma SeH trabajamos comprometidos con la prevención de riesgos laborales, priorizando la seguridad de los trabajadores y el cumplimiento normativo de las empresas. Brindamos soluciones integrales, técnicas y accesibles, con foco en la mejora continua.</p>
-    <h3 style="margin-top: 3rem;">🧭 Misión</h3>
-    <p>Prevenir riesgos laborales mediante un servicio integral, técnico y accesible.</p>
-    <h3 style="margin-top: 3rem;">🚀 Visión</h3>
-<p>Ser la consultora de Higiene y Seguridad líder en innovación, fusionando experiencia y tecnología para un crecimiento sin riesgos.</p>
-    <h3 style="margin-top: 3rem;">💡 Valores</h3>
-    <ul>
-      <li>Compromiso</li>
-      <li>Responsabilidad</li>
-      <li>Cercanía</li>
-      <li>Ética profesional</li>
-    </ul>
-  </section>
-
-  <section id="clientes">
+  <!-- Sección Clientes -->
+  <section id="clientes" class="container">
     <h2>Clientes</h2>
-    <p>Empresas que confían en nuestros servicios. Espacio reservado para logos o testimonios.</p>
+    <p>Próximamente los testimonios de nuestros clientes.</p>
   </section>
 
-  <section id="contacto">
+  <!-- Sección Nosotros -->
+  <section id="nosotros" class="container">
+    <h2>Nosotros</h2>
+    <h3>Nuestra Misión</h3>
+    <p>Proteger la salud y seguridad de tu personal.</p>
+    <h3>Nuestra Visión</h3>
+    <p>Ser líderes en consultoría online de H&S.</p>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="container contact-form">
     <h2>Contacto</h2>
-    <form class="contact-form">
-      <input type="text" name="nombre" placeholder="Nombre completo" required />
-      <input type="text" name="empresa" placeholder="Empresa" />
-      <input type="email" name="email" placeholder="Correo electrónico" required />
-      <input type="tel" name="telefono" placeholder="Teléfono" />
-      <textarea name="consulta" rows="5" placeholder="Consulta" required></textarea>
+    <form action="#" method="post">
+      <input type="text" id="name" name="name" placeholder="Nombre" required />
+      <input type="email" id="email" name="email" placeholder="Email" required />
+      <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="footer">
     <p>&copy; 2025 Confirma SeH. Todos los derechos reservados.</p>
   </footer>
 </body>
