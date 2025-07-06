@@ -225,3 +225,69 @@ button:hover,
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
 }
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .hero-logo {
+    max-width: 300px;
+  }
+  .servicios-h2 {
+    font-size: 2.2rem;
+  }
+  section.intro-section.intro-blanco {
+    padding: 2rem 1rem;
+    max-width: 98vw;
+  }
+  #servicios,
+  #nosotros,
+  #contacto {
+    padding: 2rem 1rem;
+    max-width: 98vw;
+  }
+  .service-cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .hero-bottom-img {
+    aspect-ratio: 2.5/1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-logo {
+    max-width: 180px;
+  }
+  .servicios-h2 {
+    font-size: 1.3rem;
+  }
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  section.intro-section.intro-blanco {
+    padding: 1.2rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  #servicios,
+  #nosotros,
+  #contacto {
+    padding: 1.2rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  .service-card {
+    padding: 1rem 0.5rem;
+  }
+  .hero-bottom-img {
+    aspect-ratio: 1.5/1;
+  }
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .nav-list li {
+    margin: 0.2rem 0;
+  }
+}
