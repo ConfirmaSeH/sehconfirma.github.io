@@ -266,10 +266,12 @@ button:hover,
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
+  border: 2px solid red; /* DEBUGGING */
 }
 
 #nosotros .nosotros-item {
   flex: 1;
+  border: 2px solid lime; /* DEBUGGING */
 }
 
 #nosotros h3 {
