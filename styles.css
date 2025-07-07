@@ -192,7 +192,7 @@ section.intro-section.intro-blanco .intro-detalle {
   border: 1px solid var(--gray-mid);
   border-radius: 4px;
   padding: 1.5rem;
-  text-align: left;
+  text-align: left !important; /* Forzar alineación */
 }
 #servicios .service-card h3 {
   color: #000 !important; /* Forzar color negro */
