@@ -262,19 +262,34 @@ button:hover,
   margin: 0 auto;
 }
 
-#nosotros h3 {
+#nosotros .nosotros-content {
+  display: flex;
+  gap: 2rem;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
+}
+
+#nosotros .nosotros-item {
+  flex: 1;
+}
+
+#nosotros h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   color: var(--green-sec);
 }
 #nosotros p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   font-size: 1.1rem;
 }
 
 /* Media Queries */
 @media (max-width: 900px) {
+  #nosotros .nosotros-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .navbar {
     display: flex;
     flex-direction: column;
