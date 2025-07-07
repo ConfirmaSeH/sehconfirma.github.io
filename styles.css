@@ -204,6 +204,11 @@ section.intro-section.intro-blanco .intro-detalle {
   color: #000; /* Ahora negro */
 }
 
+/* Asegura que las listas de tipos de servicio aparezcan en negro */
+.service-card li {
+  color: #000;
+}
+
 /* Formulario de contacto */
 .contact-form input,
 .contact-form textarea {
