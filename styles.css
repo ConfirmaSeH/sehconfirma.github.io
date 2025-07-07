@@ -190,6 +190,7 @@ section.intro-section.intro-blanco .intro-detalle {
   border: 1px solid var(--gray-mid);
   border-radius: 4px;
   padding: 1.5rem;
+  text-align: center;
 }
 #servicios .service-card h3 {
   color: #000 !important; /* Forzar color negro */
@@ -201,6 +202,12 @@ section.intro-section.intro-blanco .intro-detalle {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #000 !important; /* Forzar color negro */
+}
+
+#servicios .service-card ul {
+  display: inline-block;
+  text-align: left;
+  margin-top: 0.5rem;
 }
 
 /* Formulario de contacto */
