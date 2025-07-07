@@ -193,16 +193,16 @@ section.intro-section.intro-blanco .intro-detalle {
   border-radius: 4px;
   padding: 1.5rem;
 }
-.service-card h3 {
-  color: #000;
+#servicios .service-card h3 {
+  color: #000 !important; /* Forzar color negro */
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
-.service-card p,
-.service-card li {
+#servicios .service-card p,
+#servicios .service-card ul li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #000; /* Ahora negro */
+  color: #000 !important; /* Forzar color negro */
 }
 
 /* Formulario de contacto */
