@@ -262,13 +262,13 @@ button:hover,
   margin: 0 auto;
 }
 
-#nosotros .nosotros-content {
+#nosotros .about-us-grid {
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-#nosotros .nosotros-item {
+#nosotros .about-us-card {
   flex: 1;
 }
 
@@ -285,7 +285,7 @@ button:hover,
 
 /* Media Queries */
 @media (max-width: 900px) {
-  #nosotros .nosotros-content {
+  #nosotros .about-us-grid {
     flex-direction: column;
     gap: 2rem;
   }
