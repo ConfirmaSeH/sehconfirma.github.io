@@ -194,11 +194,12 @@ section.intro-section.intro-blanco .intro-detalle {
   padding: 1.5rem;
 }
 .service-card h3 {
-  color: var(--green-sec);
+  color: #000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
-.service-card p {
+.service-card p,
+.service-card li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #000; /* Ahora negro */
