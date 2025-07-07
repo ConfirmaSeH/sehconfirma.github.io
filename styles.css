@@ -262,6 +262,11 @@ button:hover,
   margin: 0 auto;
 }
 
+#nosotros h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 #nosotros .about-us-grid {
   display: flex;
   gap: 2rem;
@@ -270,15 +275,21 @@ button:hover,
 
 #nosotros .about-us-card {
   flex: 1;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-#nosotros h3 {
+#nosotros .about-us-card h3 {
+  color: #000;
+  text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: var(--green-sec);
 }
-#nosotros p {
+
+#nosotros .about-us-card p {
+  color: #333;
   margin-bottom: 0;
   font-size: 1.1rem;
 }
