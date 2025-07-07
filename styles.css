@@ -132,9 +132,7 @@ html, body {
   margin-top: 0.5rem;
   text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
-.servicios-title {
-  text-align: center;
-}
+
 .servicios-h2 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -192,7 +190,6 @@ section.intro-section.intro-blanco .intro-detalle {
   border: 1px solid var(--gray-mid);
   border-radius: 4px;
   padding: 1.5rem;
-  text-align: left !important; /* Forzar alineación */
 }
 #servicios .service-card h3 {
   color: #000 !important; /* Forzar color negro */
