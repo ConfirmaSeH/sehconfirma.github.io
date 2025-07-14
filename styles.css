@@ -192,17 +192,20 @@ section.intro-section.intro-blanco .intro-detalle {
   padding: 1.5rem;
   /* text-align is removed to allow default left-alignment */
 }
-#servicios .service-card h3 {
+#servicios .service-card h3,
+#nosotros .service-card h3 {
   color: #000 !important; /* Forzar color negro */
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-align: center; /* Center the heading specifically */
 }
 #servicios .service-card p,
-#servicios .service-card ul li {
+#servicios .service-card ul li,
+#nosotros .service-card p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #000 !important; /* Forzar color negro */
+  font-size: 1.1rem;
 }
 
 #servicios .service-card ul {
@@ -262,44 +265,11 @@ button:hover,
   margin: 0 auto;
 }
 
-#nosotros h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
-#nosotros .about-us-grid {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-#nosotros .about-us-card {
-  flex: 1;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-#nosotros .about-us-card h3 {
-  color: #000;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-#nosotros .about-us-card p {
-  color: #333;
-  margin-bottom: 0;
-  font-size: 1.1rem;
-}
 
 /* Media Queries */
 @media (max-width: 900px) {
-  #nosotros .about-us-grid {
-    flex-direction: column;
-    gap: 2rem;
-  }
+
 
   .navbar {
     display: flex;
