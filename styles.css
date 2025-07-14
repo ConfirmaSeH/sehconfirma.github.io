@@ -201,14 +201,15 @@ section.intro-section.intro-blanco .intro-detalle {
 }
 #servicios .service-card p,
 #servicios .service-card ul li,
-#nosotros .service-card p {
+#nosotros .service-card ul li {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #000 !important; /* Forzar color negro */
   font-size: 1.1rem;
 }
 
-#servicios .service-card ul {
+#servicios .service-card ul,
+#nosotros .service-card ul {
   /* This rule ensures the list itself is left-aligned and bullets are handled correctly */
   list-style-position: inside;
   padding-left: 0;
