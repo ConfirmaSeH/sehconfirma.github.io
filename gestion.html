@@ -73,11 +73,14 @@
 
             <h2>Datos del Establecimiento</h2>
             
-            <div>
-                <label for="nombre_establecimiento">Nombre de Establecimiento (Buscar):</label>
-                <input type="text" id="nombre_establecimiento" required>
-                <input type="hidden" id="establecimiento_id_seleccionado"> 
-            </div>
+           <div>
+                 <label for="nombre_establecimiento">Nombre de Establecimiento (Buscar):</label>
+                 <input type="text" id="nombre_establecimiento" list="opciones-clientes" required>
+    
+             <datalist id="opciones-clientes"></datalist>
+
+             <input type="hidden" id="establecimiento_id_seleccionado"> 
+         </div>
             
             <div>
                 <label for="cuit">CUIT:</label>
