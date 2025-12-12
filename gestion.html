@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Automatizado - Medición</title>
+
+    <style>
+        /* Estilo para el body con fondo azul muy claro */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff; /* Azul muy claro (similar a un cielo despejado) */
+            padding: 20px;
+            margin: 0;
+            color: #333;
+        }
+        /* Estilo para el contenedor central del formulario */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilo para agrupar las secciones del formulario */
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #0056b3; /* Azul más oscuro para etiquetas */
+        }
+        input[type="text"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #b3d9ff; /* Borde azul claro */
+            border-radius: 4px;
+            box-sizing: border-box; /* Importante para que el padding no afecte el ancho total */
+        }
+        input[readonly] {
+            background-color: #f0f8ff; /* Fondo ligeramente diferente para campos de solo lectura */
+        }
+        button {
+            background-color: #007bff; /* Azul primario para el botón */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #b3d9ff;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Generador de Documentos de Medición</h1>
+        
+        <form id="formulario-medicion">
+
+            <h2>Datos del Establecimiento</h2>
+            
+            <div>
+                <label for="nombre_establecimiento">Nombre de Establecimiento (Buscar):</label>
+                <input type="text" id="nombre_establecimiento" required>
+                <input type="hidden" id="establecimiento_id_seleccionado"> 
+            </div>
+            
+            <div>
+                <label for="cuit">CUIT:</label>
+                <input type="text" id="cuit" readonly>
+            </div>
+            
+            <div>
+                <label for="razon_social">Razón Social:</label>
+                <input type="text" id="razon_social" readonly>
+            </div>
+
+            <div>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" readonly>
+            </div>
+
+            <h2>Datos de la Medición</h2>
+
+            <div>
+                <label for="fecha_medicion">Fecha de Medición:</label>
+                <input type="date" id="fecha_medicion" required>
+            </div>
+
+            <div>
+                <label for="hora_inicio">Hora de inicio:</label>
+                <input type="time" id="hora_inicio" required>
+            </div>
+
+            <div>
+                <label for="valor_medido">Valor Medido:</label>
+                <input type="text" id="valor_medido" required>
+            </div>
+
+            <button type="submit">Guardar Documento</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="js/app.js"></script> 
+
+</body>
+</html>
