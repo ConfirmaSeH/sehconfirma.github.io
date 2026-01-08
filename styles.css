@@ -88,6 +88,41 @@ html, body {
 .nav-list a:hover {
   color: var(--green-sec);
 }
+.cta-cursos {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 22px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cursos {
+  background-color: #0a3d62; /* azul Confirma */
+  color: #ffffff;
+}
+
+.btn-cursos:hover {
+  background-color: #07406b;
+}
+
+.btn-campus {
+  background-color: #ffffff;
+  color: #0a3d62;
+  border: 2px solid #0a3d62;
+}
+
+.btn-campus:hover {
+  background-color: #0a3d62;
+  color: #ffffff;
+}
 
 /* Hero full-screen */
 .hero {
