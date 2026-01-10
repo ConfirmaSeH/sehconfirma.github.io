@@ -472,3 +472,45 @@ button:hover,
 body {
   padding-top: 80px; /* altura real de la navbar */
 } 
+
+/* ===== ACCIONES NAVBAR ===== */
+
+.nav-actions {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-campus {
+  background: var(--green-sec);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn-campus:hover {
+  background: #006f26;
+}
+
+.btn-campus-outline {
+  background: #ffffff;
+  color: var(--blue-dark);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--blue-dark);
+  transition: all 0.2s ease;
+}
+
+.btn-campus-outline:hover {
+  background: var(--blue-dark);
+  color: #fff;
+}
