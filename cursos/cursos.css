@@ -1,0 +1,200 @@
+/* ===============================
+   BASE CURSOS
+================================ */
+
+body {
+  background: #f4f7fa;
+}
+
+/* ===============================
+   HERO CURSO
+================================ */
+
+.curso-hero {
+  background: linear-gradient(
+    135deg,
+    #004b8a,
+    #0066b3
+  );
+  color: #ffffff;
+  padding: 140px 20px 100px;
+  text-align: center;
+  box-shadow: 0 14px 35px rgba(0, 75, 138, 0.35);
+}
+
+.curso-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.curso-subtitle {
+  font-size: 18px;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.curso-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 35px;
+  max-width: 420px;
+  text-align: left;
+}
+
+.curso-highlights li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   BOTONES
+================================ */
+
+.btn-comprar {
+  display: inline-block;
+  background: #008833;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-comprar:hover {
+  background: #006f26;
+  transform: translateY(-2px);
+}
+
+.btn-grande {
+  font-size: 18px;
+  padding: 16px 36px;
+}
+
+/* ===============================
+   SECCIONES
+================================ */
+
+.curso-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 20px;
+}
+
+.curso-light {
+  background: #ffffff;
+}
+
+.curso-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #004b8a;
+}
+
+.curso-section p {
+  font-size: 16px;
+  color: #2e3a47;
+  max-width: 800px;
+}
+
+/* ===============================
+   LISTAS
+================================ */
+
+.curso-section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.curso-section li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #2e3a47;
+}
+
+.curso-contenidos {
+  list-style: none;
+  padding-left: 0;
+}
+
+.curso-contenidos li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.curso-contenidos li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #008833;
+  font-weight: bold;
+}
+
+/* ===============================
+   PRECIO / CTA FINAL
+================================ */
+
+.curso-precio {
+  background: linear-gradient(
+    135deg,
+    #004b8a,
+    #008833
+  );
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.curso-precio h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.precio {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.nota-precio {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 15px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .curso-hero {
+    padding: 120px 15px 80px;
+  }
+
+  .curso-hero h1 {
+    font-size: 32px;
+  }
+
+  .curso-subtitle {
+    font-size: 16px;
+  }
+
+  .curso-section {
+    padding: 50px 15px;
+  }
+
+  .curso-section h2 {
+    font-size: 24px;
+  }
+
+  .precio {
+    font-size: 34px;
+  }
+}
