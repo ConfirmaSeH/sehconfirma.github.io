@@ -9,7 +9,10 @@
   --gray-mid:   #D1D9E0;
   --text-dark:  #2E3A47;
   --text-light: #55657A;
+  --text-light: #6b7280;
+  --green-sec: #008833;
 }
+
 
 * {
   margin: 0;
@@ -87,41 +90,6 @@ html, body {
 }
 .nav-list a:hover {
   color: var(--green-sec);
-}
-.cta-cursos {
-  display: flex;
-  gap: 15px;
-  margin-top: 25px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 22px;
-  font-size: 16px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-cursos {
-  background-color: #0a3d62; /* azul Confirma */
-  color: #ffffff;
-}
-
-.btn-cursos:hover {
-  background-color: #07406b;
-}
-
-.btn-campus {
-  background-color: #ffffff;
-  color: #0a3d62;
-  border: 2px solid #0a3d62;
-}
-
-.btn-campus:hover {
-  background-color: #0a3d62;
-  color: #ffffff;
 }
 
 /* Hero full-screen */
@@ -389,3 +357,118 @@ button:hover,
     margin: 0.2rem 0;
   }
 }
+/* ===== CAMPUS ===== */
+
+.campus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+
+/* GRID */
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+
+.course-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: 0 10px 28px rgba(0, 75, 138, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(0, 75, 138, 0.32);
+}
+
+/* IMAGE */
+
+.course-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+
+.course-content {
+  padding: 20px;
+}
+
+/* BADGE CATEGORÍA */
+
+.course-category {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue-dark);
+  background: rgba(0, 75, 138, 0.12);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.course-category.deportes {
+  background: rgba(0, 136, 51, 0.12);
+  color: var(--green-sec);
+}
+
+/* TITULO CURSO */
+
+.course-content h3 {
+  font-size: 18px;
+  margin: 10px 0 15px;
+  color: var(--blue-dark);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* INFO */
+
+.course-info {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+
+/* ===== HERO CAMPUS ===== */
+
+.campus-header {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: linear-gradient(135deg, #004b8a, #0066b3);
+  padding: 90px 20px 100px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 75, 138, 0.35);
+}
+
+.campus-header h1 {
+  color: #ffffff;
+  font-size: 42px;
+  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.campus-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+body {
+  padding-top: 80px; /* altura real de la navbar */
+} 
