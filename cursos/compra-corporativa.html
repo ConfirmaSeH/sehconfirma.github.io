@@ -61,6 +61,8 @@
   <button type="submit" class="btn-comprar btn-grande">
     Solicitar cotización
   </button>
+</form> 
+
 
          <h3 class="titulo-cotizador">Cotizador automático</h3>
 <p class="subtitulo-cotizador">
@@ -100,6 +102,109 @@
   <button type="submit" class="btn-cotizacion-verde">
     Solicitar cotización simulada
   </button>
+
+          <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+          const precioBase = 24200;
+          const empleadosInput = document.getElementById('empleados');
+          const precioSpan = document.getElementById('precio');
+          const detalle = document.getElementById('detalleDescuento');
+
+          function calcular() {
+            const empleados = parseInt(empleadosInput.value);
+
+            if (!empleados || empleados < 2) {
+              precioSpan.innerText = "0";
+              detalle.innerText = "La compra corporativa requiere mínimo 2 empleados.";
+              return;
+            }
+
+            let descuento = 1;
+            let porcentaje = 0;
+
+            if (empleados >= 50) {
+              descuento = 0.8;
+              porcentaje = 20;
+            } else if (empleados >= 25) {
+              descuento = 0.85;
+              porcentaje = 15;
+            } else if (empleados >= 10) {
+              descuento = 0.9;
+              porcentaje = 10;
+            }
+
+            const total = precioBase * empleados * descuento;
+
+            precioSpan.innerText = total.toLocaleString("es-AR");
+
+            if (porcentaje > 0) {
+              detalle.innerText = `Incluye ${porcentaje}% de descuento por volumen.`;
+            } else {
+              detalle.innerText = "Sin descuento por volumen.";
+            }
+          }
+
+          empleadosInput.addEventListener('input', calcular);
+
+        });
+        </script>
+ 
+            <script>
+      document.addEventListener("DOMContentLoaded", function() {
+
+        const form = document.getElementById('formCotizacion');
+
+        form.addEventListener('submit', function(e) {
+
+          e.preventDefault();
+
+          const empleados = document.getElementById('empleados').value;
+          const cuit = document.getElementById('cuit').value;
+          const email = document.getElementById('email').value;
+          const total = document.getElementById('precio').innerText;
+
+          if (!empleados || empleados < 2) {
+            alert("Debe ingresar mínimo 2 empleados.");
+            return;
+          }
+
+          if (!cuit || cuit.length !== 11) {
+            alert("CUIT inválido.");
+            return;
+          }
+
+          if (!email) {
+            alert("Debe ingresar un email.");
+            return;
+          }
+
+          const formData = new FormData();
+          formData.append("cantidad_empleados", empleados);
+          formData.append("cuit_empresa", cuit);
+          formData.append("total_estimado", "$ " + total);
+          formData.append("email_contacto", email);
+          formData.append("_subject", "Solicitud de cotización corporativa");
+          formData.append("_captcha", "false");
+
+          fetch("https://formsubmit.co/info@sehconfirma.com.ar", {
+            method: "POST",
+            body: formData
+          })
+          .then(() => {
+            document.getElementById('mensajeExito').style.display = "block";
+            form.reset();
+            document.getElementById('precio').innerText = "0";
+          })
+          .catch(() => {
+            alert("Error al enviar.");
+          });
+
+        });
+
+      });
+      </script>
+
 
   <p id="mensajeExito" class="mensaje-exito" style="display:none;">
     ✔ Cotización enviada. A la brevedad nos contactaremos con usted.
