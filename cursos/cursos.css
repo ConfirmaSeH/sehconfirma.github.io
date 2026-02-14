@@ -245,6 +245,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.form-corporativo,
+.cotizador-box {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 
 
 /* ===============================
@@ -369,3 +375,21 @@ body {
     font-size: 34px;
   }
 }
+
+/*___________ Ajuste para Celu ___________*/
+
+@media (max-width: 768px) {
+
+  .nav-list,
+  .nav-actions {
+    display: none;
+  }
+
+  .nav-mail {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+}
+
