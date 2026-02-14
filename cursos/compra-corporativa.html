@@ -143,33 +143,66 @@
       <button type="submit" id="btnCotizacion" class="btn-cotizacion-verde">
         Solicitar cotización simulada
       </button>
+          
+          <p id="mensajeExito" class="mensaje-exito" style="display:none;">
+      ✔ Cotización enviada. A la brevedad nos contactaremos con usted.
+    </p>
 
-           <script>
-        document.getElementById('formCotizacion').addEventListener('submit', function(e) {
+                     <script>
+            document.getElementById('formCotizacion').addEventListener('submit', function(e) {
 
-          const empleados = document.getElementById('empleados').value;
-          const cuit = document.getElementById('cuit').value;
-          const total = document.getElementById('precio').innerText;
+              e.preventDefault(); // evitamos redirección
 
-          if (!empleados || empleados < 2) {
-            e.preventDefault();
-            alert("Debe ingresar mínimo 2 empleados.");
-            return;
-          }
+              const empleados = document.getElementById('empleados').value;
+              const cuit = document.getElementById('cuit').value;
+              const total = document.getElementById('precio').innerText;
+              const email = document.getElementById('email').value;
 
-          if (!cuit || cuit.length !== 11) {
-            e.preventDefault();
-            alert("Debe ingresar un CUIT válido de 11 dígitos.");
-            return;
-          }
+              if (!empleados || empleados < 2) {
+                alert("Debe ingresar mínimo 2 empleados.");
+                return;
+              }
 
-          document.getElementById('hiddenEmpleados').value = empleados;
-          document.getElementById('hiddenCuit').value = cuit;
-          document.getElementById('hiddenTotal').value = "$ " + total;
-        });
-        </script>
+              if (!cuit || cuit.length !== 11) {
+                alert("Debe ingresar un CUIT válido de 11 dígitos.");
+                return;
+              }
 
-      <input type="hidden" name="_next" value="https://sehconfirma.com.ar/gracias-cotizacion.html">
+              if (!email) {
+                alert("Debe ingresar un email de contacto.");
+                return;
+              }
+
+              document.getElementById('hiddenEmpleados').value = empleados;
+              document.getElementById('hiddenCuit').value = cuit;
+              document.getElementById('hiddenTotal').value = "$ " + total;
+              document.getElementById('hiddenEmail').value = email;
+
+              const form = this;
+
+              fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+              })
+              .then(response => {
+                document.getElementById('mensajeExito').style.display = "block";
+                form.reset();
+              })
+              .catch(error => {
+                alert("Hubo un error al enviar la cotización.");
+              });
+
+            });
+            </script>
+
+        
+            <div class="input-group">
+            <input type="email" id="email" required>
+            <label>Email de contacto</label>
+          </div>
+
+        <input type="hidden" name="email_contacto" id="hiddenEmail">
+        <input type="hidden" name="_next" value="https://sehconfirma.com.ar/gracias-cotizacion.html">
 
     </form>
 </section>
