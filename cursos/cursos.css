@@ -75,6 +75,170 @@ body {
   font-size: 18px;
   padding: 16px 36px;
 }
+/*//////*/
+.botones-compra {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-corporativa {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #1e2a38;   /* Gris institucional */
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  opacity: 0.85;
+}
+
+.btn-corporativa:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+/*//_____ Seccion compra corporativa landing ______//**/
+.form-corporativo {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 16px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  background: #f9fafc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #1e2a38;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(30,42,56,0.08);
+}
+
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  font-size: 14px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s ease;
+  background: transparent;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  background: white;
+  padding: 0 6px;
+  color: #1e2a38;
+}
+.titulo-cotizador {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  color: #1e2a38;
+}
+
+.subtitulo-cotizador {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.cotizador-box .input-group {
+  margin-bottom: 30px;
+}
+
+.cotizador-box .input-group input {
+  height: 56px; /* altura uniforme elegante */
+}
+
+.cotizador-box .input-group label {
+  top: 18px; /* centra mejor el label flotante */
+}
+.cotizador-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;   /* espacio entre bloques */
+}
+
+
+.resultado-cotizacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.resultado-cotizacion h2 {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #1e2a38;
+}
+
+.detalle-descuento {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+
+
+.btn-cotizacion-verde:hover {
+  background: #18723d;
+  transform: translateY(-2px);
+}
+#formCotizacion {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-cotizacion-verde {
+  margin-top: 25px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  background: #1f8f4e;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cotizacion-verde:hover {
+  background: #18723d;
+  transform: translateY(-2px);
+}
+
+
+
 
 /* ===============================
    SECCIONES

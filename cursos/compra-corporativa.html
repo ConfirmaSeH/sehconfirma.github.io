@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra Corporativa | Confirma</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="cursos.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-mail">
+    <a href="mailto:info@sehconfirma.com.ar">info@sehconfirma.com.ar</a>
+  </div>
+
+  <ul class="nav-list">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="../index.html#servicios">Servicios</a></li>
+    <li><a href="../index.html#nosotros">Nosotros</a></li>
+    <li><a href="../index.html#contacto">Contacto</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <a href="../campus.html" class="btn-campus">Acceso a cursos</a>
+    <a href="https://campus.sehconfirma.com.ar/" class="btn-campus-outline">Campus online</a>
+  </div>
+</nav>
+
+<header class="curso-hero">
+  <h1>Compra Corporativa</h1>
+  <p class="curso-subtitle">
+    Solicite una cotización para capacitar a su equipo
+  </p>
+</header>
+
+<section class="curso-section">
+  <form class="form-corporativo" action="https://formsubmit.co/info@sehconfirma.com.ar" method="POST">
+
+  <div class="input-group">
+    <input type="text" name="nombre" required>
+    <label>Nombre y Apellido</label>
+  </div>
+
+  <div class="input-group">
+    <input type="email" name="mail" required>
+    <label>Correo electrónico</label>
+  </div>
+
+  <div class="input-group">
+    <textarea name="mensaje" rows="4" required></textarea>
+    <label>Mensaje</label>
+  </div>
+
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit" class="btn-comprar btn-grande">
+    Solicitar cotización
+  </button>
+
+         <h3 class="titulo-cotizador">Cotizador automático</h3>
+        <p class="subtitulo-cotizador">
+          Calculá el valor estimado según cantidad de empleados y rubro.
+        </p>
+
+          <div class="cotizador-box">
+
+            <div class="input-group">
+              <input type="number" id="empleados" min="2" required>
+              <label>Cantidad de empleados (mínimo 2)</label>
+            </div>
+
+            <div class="input-group">
+              <input type="text" id="cuit" pattern="[0-9]{11}" maxlength="11" required>
+              <label>CUIT de la empresa (11 dígitos)</label>
+            </div>
+
+            <div class="resultado-cotizacion">
+              <p>Total estimado:</p>
+              <h2>$ <span id="precio">0</span></h2>
+              <p class="detalle-descuento" id="detalleDescuento"></p>
+            </div>
+
+          </div>
+
+
+                                 <script>
+          const precioBase = 24200;
+
+          function calcular() {
+            const empleadosInput = document.getElementById('empleados');
+            const empleados = parseInt(empleadosInput.value);
+            const precioSpan = document.getElementById('precio');
+            const detalle = document.getElementById('detalleDescuento');
+
+            if (!empleados || empleados < 2) {
+              precioSpan.innerText = "0";
+              detalle.innerText = "La compra corporativa requiere mínimo 2 empleados.";
+              return;
+            }
+
+            let descuento = 1;
+            let porcentaje = 0;
+
+            if (empleados >= 50) {
+              descuento = 0.8;
+              porcentaje = 20;
+            } else if (empleados >= 25) {
+              descuento = 0.85;
+              porcentaje = 15;
+            } else if (empleados >= 10) {
+              descuento = 0.9;
+              porcentaje = 10;
+            }
+
+            const total = precioBase * empleados * descuento;
+
+            precioSpan.innerText = total.toLocaleString("es-AR");
+
+            if (porcentaje > 0) {
+              detalle.innerText = `Incluye ${porcentaje}% de descuento por volumen.`;
+            } else {
+              detalle.innerText = "Sin descuento por volumen.";
+            }
+          }
+
+          document.getElementById('empleados').addEventListener('input', calcular);
+          </script>
+</form>
+
+    <form id="formCotizacion" action="https://formsubmit.co/info@sehconfirma.com.ar" method="POST">
+
+      <input type="hidden" name="cantidad_empleados" id="hiddenEmpleados">
+      <input type="hidden" name="cuit_empresa" id="hiddenCuit">
+      <input type="hidden" name="total_estimado" id="hiddenTotal">
+      <input type="hidden" name="_subject" value="Solicitud de cotización corporativa">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit" id="btnCotizacion" class="btn-cotizacion-verde">
+        Solicitar cotización simulada
+      </button>
+
+           <script>
+        document.getElementById('formCotizacion').addEventListener('submit', function(e) {
+
+          const empleados = document.getElementById('empleados').value;
+          const cuit = document.getElementById('cuit').value;
+          const total = document.getElementById('precio').innerText;
+
+          if (!empleados || empleados < 2) {
+            e.preventDefault();
+            alert("Debe ingresar mínimo 2 empleados.");
+            return;
+          }
+
+          if (!cuit || cuit.length !== 11) {
+            e.preventDefault();
+            alert("Debe ingresar un CUIT válido de 11 dígitos.");
+            return;
+          }
+
+          document.getElementById('hiddenEmpleados').value = empleados;
+          document.getElementById('hiddenCuit').value = cuit;
+          document.getElementById('hiddenTotal').value = "$ " + total;
+        });
+        </script>
+
+      <input type="hidden" name="_next" value="https://sehconfirma.com.ar/gracias-cotizacion.html">
+
+    </form>
+</section>
+
+<footer class="footer">
+  © Confirma Seguridad e Higiene
+</footer>
+
+</body>
+</html>
